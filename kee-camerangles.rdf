@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cam="http://example.org/camera-angles#">
+
+    <!-- Concept Scheme -->
+    <skos:ConceptScheme rdf:about="http://example.org/camera-angles">
+        <dc:title>Camera Angles in Photography and Cinematography</dc:title>
+        <dc:description>A taxonomy of camera angles used in artistic photography and cinematography</dc:description>
+        <dc:creator>Camera Angles Taxonomy</dc:creator>
+        <skos:hasTopConcept rdf:resource="http://example.org/camera-angles#CameraAngle"/>
+    </skos:ConceptScheme>
+
+    <!-- Top Concept -->
+    <skos:Concept rdf:about="http://example.org/camera-angles#CameraAngle">
+        <skos:prefLabel xml:lang="en">Camera Angle</skos:prefLabel>
+        <skos:definition>The position and orientation of a camera relative to the subject</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/camera-angles"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#HorizontalAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#SpecializedAngle"/>
+    </skos:Concept>
+
+    <!-- Vertical Angles Category -->
+    <skos:Concept rdf:about="http://example.org/camera-angles#VerticalAngle">
+        <skos:prefLabel xml:lang="en">Vertical Angle</skos:prefLabel>
+        <skos:definition>Camera angles defined by vertical positioning relative to the subject</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#CameraAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#EyeLevel"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#HighAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#LowAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#BirdsEyeView"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#WormsEyeView"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#AerialShot"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#EyeLevel">
+        <skos:prefLabel xml:lang="en">Eye Level</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Neutral Angle</skos:altLabel>
+        <skos:definition>Camera positioned at the subject's eye level, creating a neutral perspective</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:scopeNote>Commonly used for dialogue scenes and natural perspectives</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#HighAngle">
+        <skos:prefLabel xml:lang="en">High Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Downward Angle</skos:altLabel>
+        <skos:definition>Camera positioned above the subject, looking downward</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:scopeNote>Often used to make subjects appear vulnerable, weak, or diminished</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#LowAngle">
+        <skos:prefLabel xml:lang="en">Low Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Upward Angle</skos:altLabel>
+        <skos:definition>Camera positioned below the subject, looking upward</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:scopeNote>Often used to make subjects appear powerful, dominant, or threatening</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#BirdsEyeView">
+        <skos:prefLabel xml:lang="en">Bird's Eye View</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Overhead Shot</skos:altLabel>
+        <skos:altLabel xml:lang="en">Top-Down Shot</skos:altLabel>
+        <skos:definition>Camera positioned directly above the subject, looking straight down</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:related rdf:resource="http://example.org/camera-angles#AerialShot"/>
+        <skos:scopeNote>Provides god-like perspective or used for establishing spatial relationships</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#WormsEyeView">
+        <skos:prefLabel xml:lang="en">Worm's Eye View</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Ground Level Shot</skos:altLabel>
+        <skos:definition>Camera positioned at ground level, looking straight up</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:scopeNote>Creates extreme dramatic effect, emphasizing height and power</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#AerialShot">
+        <skos:prefLabel xml:lang="en">Aerial Shot</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Drone Shot</skos:altLabel>
+        <skos:definition>Camera positioned high in the air, often from aircraft or drones</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#VerticalAngle"/>
+        <skos:related rdf:resource="http://example.org/camera-angles#BirdsEyeView"/>
+        <skos:scopeNote>Used for establishing shots and sweeping landscape views</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Horizontal Angles Category -->
+    <skos:Concept rdf:about="http://example.org/camera-angles#HorizontalAngle">
+        <skos:prefLabel xml:lang="en">Horizontal Angle</skos:prefLabel>
+        <skos:definition>Camera angles defined by horizontal positioning relative to the subject</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#CameraAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#FrontalAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#ProfileAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#ThreeQuarterAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#RearAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#OverTheShoulderAngle"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#FrontalAngle">
+        <skos:prefLabel xml:lang="en">Frontal Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Head-On Shot</skos:altLabel>
+        <skos:definition>Camera positioned directly in front of the subject</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#HorizontalAngle"/>
+        <skos:scopeNote>Creates direct engagement with the audience</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#ProfileAngle">
+        <skos:prefLabel xml:lang="en">Profile Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Side Angle</skos:altLabel>
+        <skos:altLabel xml:lang="en">90-Degree Angle</skos:altLabel>
+        <skos:definition>Camera positioned at a 90-degree angle to the subject's facing direction</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#HorizontalAngle"/>
+        <skos:scopeNote>Emphasizes facial features and used in dramatic confrontations</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#ThreeQuarterAngle">
+        <skos:prefLabel xml:lang="en">Three-Quarter Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">45-Degree Angle</skos:altLabel>
+        <skos:definition>Camera positioned at approximately 45 degrees to the subject</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#HorizontalAngle"/>
+        <skos:scopeNote>Most commonly used angle in portraiture and interviews</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#RearAngle">
+        <skos:prefLabel xml:lang="en">Rear Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Behind Shot</skos:altLabel>
+        <skos:definition>Camera positioned behind the subject</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#HorizontalAngle"/>
+        <skos:scopeNote>Used to show what the subject is seeing or to create mystery</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#OverTheShoulderAngle">
+        <skos:prefLabel xml:lang="en">Over-the-Shoulder Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">OTS Shot</skos:altLabel>
+        <skos:definition>Camera positioned behind one subject's shoulder, viewing another subject</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#HorizontalAngle"/>
+        <skos:scopeNote>Standard angle for dialogue scenes and conversations</skos:scopeNote>
+    </skos:Concept>
+
+    <!-- Specialized Angles Category -->
+    <skos:Concept rdf:about="http://example.org/camera-angles#SpecializedAngle">
+        <skos:prefLabel xml:lang="en">Specialized Angle</skos:prefLabel>
+        <skos:definition>Camera angles that create specific artistic or dramatic effects</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#CameraAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#DutchAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#POVAngle"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#TwoShot"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#CantedFrame"/>
+        <skos:narrower rdf:resource="http://example.org/camera-angles#ReversAngle"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#DutchAngle">
+        <skos:prefLabel xml:lang="en">Dutch Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Dutch Tilt</skos:altLabel>
+        <skos:altLabel xml:lang="en">Canted Angle</skos:altLabel>
+        <skos:altLabel xml:lang="en">Oblique Angle</skos:altLabel>
+        <skos:definition>Camera tilted on its roll axis to create a slanted horizon line</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#SpecializedAngle"/>
+        <skos:related rdf:resource="http://example.org/camera-angles#CantedFrame"/>
+        <skos:scopeNote>Used to convey unease, disorientation, or psychological tension</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#POVAngle">
+        <skos:prefLabel xml:lang="en">Point of View Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">POV Shot</skos:altLabel>
+        <skos:altLabel xml:lang="en">Subjective Camera</skos:altLabel>
+        <skos:definition>Camera positioned to show the scene from a character's perspective</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#SpecializedAngle"/>
+        <skos:scopeNote>Creates immersion and identification with a character</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#TwoShot">
+        <skos:prefLabel xml:lang="en">Two Shot</skos:prefLabel>
+        <skos:definition>Camera angle that frames two subjects in the same shot</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#SpecializedAngle"/>
+        <skos:scopeNote>Used to show relationships and interactions between characters</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#CantedFrame">
+        <skos:prefLabel xml:lang="en">Canted Frame</skos:prefLabel>
+        <skos:definition>Frame intentionally tilted off the horizontal axis</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#SpecializedAngle"/>
+        <skos:related rdf:resource="http://example.org/camera-angles#DutchAngle"/>
+        <skos:scopeNote>Similar to Dutch angle but may be more extreme</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/camera-angles#ReversAngle">
+        <skos:prefLabel xml:lang="en">Reverse Angle</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Reverse Shot</skos:altLabel>
+        <skos:definition>Camera positioned at approximately 180 degrees from the previous shot</skos:definition>
+        <skos:broader rdf:resource="http://example.org/camera-angles#SpecializedAngle"/>
+        <skos:scopeNote>Used in shot-reverse-shot sequences during conversations</skos:scopeNote>
+    </skos:Concept>
+
+</rdf:RDF>
