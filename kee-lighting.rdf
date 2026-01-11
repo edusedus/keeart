@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:ex="https://example.org/lighting-taxonomy#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <!-- Concept scheme (taxonomy) -->
+  <skos:ConceptScheme rdf:about="https://example.org/lighting-taxonomy#LightingConceptScheme">
+    <skos:prefLabel xml:lang="en">Lighting concepts for generative AI prompting</skos:prefLabel>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightSource"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightingIntensity"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightingContrast"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#Shadow"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#AtmosphericLight"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#ReflectionsAndSpecular"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+    <skos:hasTopConcept rdf:resource="https://example.org/lighting-taxonomy#CameraResponseAndExposure"/>
+  </skos:ConceptScheme>
+
+  <!-- Top concepts -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightSource">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Light source</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingRole">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting role (key/fill/rim, etc.)</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingDirection">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting direction</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingQuality">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting quality</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightColor">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Light color &amp; color temperature</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingIntensity">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting intensity</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingContrast">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting contrast &amp; ratios</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Shadow">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Shadows</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#AtmosphericLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Atmospheric / participating media lighting</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ReflectionsAndSpecular">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Reflections &amp; specular highlights</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingStyle">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting styles / setups</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Environment, weather, and time-based lighting</skos:prefLabel>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#CameraResponseAndExposure">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Camera response &amp; exposure (prompting concepts)</skos:prefLabel>
+  </skos:Concept>
+
+  <!-- Light source taxonomy -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#NaturalLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Natural light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightSource"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Sunlight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Sunlight</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#NaturalLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Moonlight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Moonlight</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#NaturalLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Skylight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Skylight / ambient sky illumination</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#NaturalLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ArtificialLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Artificial light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightSource"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#TungstenLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Tungsten / incandescent</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ArtificialLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#FluorescentLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Fluorescent</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ArtificialLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LEDLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">LED</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ArtificialLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#NeonLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Neon</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ArtificialLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#PracticalLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Practical light (visible in scene)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ArtificialLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#FlashStrobe">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Flash / strobe</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ArtificialLight"/>
+  </skos:Concept>
+
+  <!-- Lighting roles -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#KeyLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Key light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#FillLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Fill light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#RimLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Rim light / edge light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#HairLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Hair light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#BackgroundLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Background light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#KickLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Kick light (small rim accent)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#MotivatedLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Motivated lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingRole"/>
+    <skos:scopeNote xml:lang="en">Lighting that appears to originate from a plausible in-scene source (window, lamp, sign).</skos:scopeNote>
+  </skos:Concept>
+
+  <!-- Lighting direction / placement -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#FrontLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Front lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#SideLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Side lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#BackLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Backlighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#TopLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Top lighting / overhead</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#UnderLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Underlighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ThreeQuarterLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Three-quarter lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#SplitLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Split lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingDirection"/>
+  </skos:Concept>
+
+  <!-- Lighting quality -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#SoftLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Soft light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#HardLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Hard light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#DiffusedLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Diffused light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#SpecularLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Specular / punchy light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#DirectionalLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Directional light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#AmbientLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Ambient light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#BounceLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Bounce light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingQuality"/>
+  </skos:Concept>
+
+  <!-- Light color / temperature -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#WarmLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Warm light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#CoolLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Cool light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#NeutralWhiteLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Neutral white light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ColorTemperatureKelvin">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Color temperature (Kelvin)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+    <skos:scopeNote xml:lang="en">Use prompting like '3200K tungsten', '5600K daylight'.</skos:scopeNote>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#GelColoredLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Gel / colored light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#MixedColorTemperature">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Mixed color temperature</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightColor"/>
+  </skos:Concept>
+
+  <!-- Intensity -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LowIntensity">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Low intensity / dim</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingIntensity"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#HighIntensity">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">High intensity / bright</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingIntensity"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Falloff">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Light falloff</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingIntensity"/>
+    <skos:scopeNote xml:lang="en">Distance-based intensity drop; useful prompt: 'rapid falloff' vs 'gentle falloff'.</skos:scopeNote>
+  </skos:Concept>
+
+  <!-- Contrast / ratios -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#HighContrast">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">High contrast lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingContrast"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LowContrast">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Low contrast lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingContrast"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LightingRatio">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lighting ratio (key-to-fill)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingContrast"/>
+    <skos:scopeNote xml:lang="en">Prompt examples: '2:1', '4:1', '8:1' key-to-fill'.</skos:scopeNote>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Chiaroscuro">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Chiaroscuro</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingContrast"/>
+  </skos:Concept>
+
+  <!-- Shadows -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#CastShadow">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Cast shadow</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#Shadow"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ContactShadow">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Contact shadow (ambient occlusion-like)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#Shadow"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ShadowSoftness">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Shadow softness</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#Shadow"/>
+    <skos:scopeNote xml:lang="en">Prompt examples: 'soft feathered shadows', 'sharp crisp shadows'.</skos:scopeNote>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ShadowDirection">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Shadow direction</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#Shadow"/>
+  </skos:Concept>
+
+  <!-- Atmospheric / volumetric -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#VolumetricLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Volumetric lighting / god rays</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#AtmosphericLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Haze">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Haze</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#AtmosphericLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Fog">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Fog</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#AtmosphericLight"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#DustInAir">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Dust / particulate in air</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#AtmosphericLight"/>
+  </skos:Concept>
+
+  <!-- Reflections & specular -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#SpecularHighlight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Specular highlight</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ReflectionsAndSpecular"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Catchlight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Catchlight (eye highlight)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ReflectionsAndSpecular"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Reflection">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Reflection</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ReflectionsAndSpecular"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LensFlare">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Lens flare</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#ReflectionsAndSpecular"/>
+  </skos:Concept>
+
+  <!-- Lighting styles / setups -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#HighKeyLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">High-key lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LowKeyLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Low-key lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#RembrandtLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Rembrandt lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ButterflyLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Butterfly / paramount lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#LoopLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Loop lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#SplitLightingStyle">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Split lighting (style)</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#CinematicLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Cinematic lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#NoirLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Film noir lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#LowKeyLighting"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#HighContrast"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#StudioLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Studio lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#ThreePointLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Three-point lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#LightingStyle"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#KeyLight"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#FillLight"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#RimLight"/>
+  </skos:Concept>
+
+  <!-- Environment / weather / time -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#GoldenHour">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Golden hour</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#BlueHour">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Blue hour</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#MiddaySun">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Midday sun</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#OvercastLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Overcast / cloudy diffuse light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#SoftLight"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#LowContrast"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#IndoorWindowLight">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Indoor window light</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#MotivatedLighting"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#NightStreetLighting">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Night street lighting</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#EnvironmentalAndTimeLighting"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#PracticalLight"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#MixedColorTemperature"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#NeonLight"/>
+  </skos:Concept>
+
+  <!-- Camera response / exposure -->
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Exposure">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Exposure</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#CameraResponseAndExposure"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Underexposed">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Underexposed</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#Exposure"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#Overexposed">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Overexposed</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#Exposure"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#DynamicRange">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">Dynamic range</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#CameraResponseAndExposure"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/lighting-taxonomy#HDRLook">
+    <skos:inScheme rdf:resource="https://example.org/lighting-taxonomy#LightingConceptScheme"/>
+    <skos:prefLabel xml:lang="en">HDR look</skos:prefLabel>
+    <skos:broader rdf:resource="https://example.org/lighting-taxonomy#CameraResponseAndExposure"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#DynamicRange"/>
+    <skos:related rdf:resource="https://example.org/lighting-taxonomy#LowContrast"/>
+  </skos:Concept>
+
+  <!-- Optional: lightweight pattern for describing a prompt's lighting -->
+  <owl:Class rdf:about="https://example.org/lighting-taxonomy#LightingProfile">
+    <rdfs:label xml:lang="en">Lighting profile</rdfs:label>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://example.org/lighting-taxonomy#hasLightingConcept">
+    <rdfs:label xml:lang="en">has lighting concept</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/lighting-taxonomy#LightingProfile"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+
+  <ex:LightingProfile rdf:about="https://example.org/lighting-taxonomy#profileExample">
+    <rdfs:label xml:lang="en">Example prompt lighting profile</rdfs:label>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#CinematicLighting"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#ThreePointLighting"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#SoftLight"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#WarmLight"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#VolumetricLighting"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#HighContrast"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#RimLight"/>
+    <ex:hasLightingConcept rdf:resource="https://example.org/lighting-taxonomy#MotivatedLighting"/>
+  </ex:LightingProfile>
+
+</rdf:RDF>
+```
