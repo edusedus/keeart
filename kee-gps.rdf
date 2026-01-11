@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:aips="http://example.org/ai-prompting-strategies#">
+
+    <!-- Ontology Definition -->
+    <owl:Ontology rdf:about="http://example.org/ai-prompting-strategies">
+        <dc:title>Generative AI Artistic Prompting Strategies Taxonomy</dc:title>
+        <dc:description>A taxonomy of prompting strategies used in generative AI systems for artistic and creative purposes.</dc:description>
+        <dc:creator>AI Prompting Research</dc:creator>
+        <dct:created>2025-01-11</dct:created>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+
+    <!-- Concept Scheme -->
+    <skos:ConceptScheme rdf:about="http://example.org/ai-prompting-strategies#PromptingStrategyScheme">
+        <dc:title>Artistic AI Prompting Strategies</dc:title>
+        <skos:hasTopConcept rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+    </skos:ConceptScheme>
+
+    <!-- Root Concept -->
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#PromptingStrategy">
+        <skos:prefLabel xml:lang="en">Prompting Strategy</skos:prefLabel>
+        <skos:definition>A technique or approach for constructing prompts to guide generative AI systems in producing artistic outputs.</skos:definition>
+        <skos:topConceptOf rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategyScheme"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#StyleBasedPrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#CompositionalPrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#AtmosphericPrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#TechnicalPrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#NarrativePrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#StructuralPrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#RefinementPrompting"/>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- STYLE-BASED PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#StyleBasedPrompting">
+        <skos:prefLabel xml:lang="en">Style-Based Prompting</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Aesthetic Referencing</skos:altLabel>
+        <skos:definition>Strategies that invoke specific visual styles, artistic movements, or aesthetic qualities.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#ArtistReferencing"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#MovementReferencing"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#EraReferencing"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#GenreReferencing"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#StyleFusion"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ArtistReferencing">
+        <skos:prefLabel xml:lang="en">Artist Referencing</skos:prefLabel>
+        <skos:definition>Invoking the style of specific artists by name to guide aesthetic output.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StyleBasedPrompting"/>
+        <skos:example>"in the style of Van Gogh", "Moebius-inspired"</skos:example>
+        <skos:scopeNote>Effectiveness varies based on artist recognition in training data.</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#MovementReferencing">
+        <skos:prefLabel xml:lang="en">Art Movement Referencing</skos:prefLabel>
+        <skos:definition>Referencing historical or contemporary art movements to establish aesthetic parameters.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StyleBasedPrompting"/>
+        <skos:example>"Art Nouveau", "Bauhaus", "Surrealism", "Cyberpunk"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#EraReferencing">
+        <skos:prefLabel xml:lang="en">Era Referencing</skos:prefLabel>
+        <skos:definition>Invoking temporal periods to guide stylistic choices.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StyleBasedPrompting"/>
+        <skos:example>"1980s aesthetic", "Victorian era", "retro-futuristic"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#GenreReferencing">
+        <skos:prefLabel xml:lang="en">Genre Referencing</skos:prefLabel>
+        <skos:definition>Specifying artistic or media genres to shape output characteristics.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StyleBasedPrompting"/>
+        <skos:example>"film noir", "anime", "fantasy illustration", "editorial photography"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#StyleFusion">
+        <skos:prefLabel xml:lang="en">Style Fusion</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Style Blending</skos:altLabel>
+        <skos:definition>Combining multiple stylistic references to create hybrid aesthetics.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StyleBasedPrompting"/>
+        <skos:example>"Art Deco meets cyberpunk", "Japanese woodblock print style with Impressionist colors"</skos:example>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- COMPOSITIONAL PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#CompositionalPrompting">
+        <skos:prefLabel xml:lang="en">Compositional Prompting</skos:prefLabel>
+        <skos:definition>Strategies focused on spatial arrangement, framing, and structural organization of visual elements.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#PerspectiveSpecification"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#FramingDirectives"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#SpatialArrangement"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#FocalPointDirection"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#PerspectiveSpecification">
+        <skos:prefLabel xml:lang="en">Perspective Specification</skos:prefLabel>
+        <skos:definition>Defining viewpoint, camera angle, or spatial perspective.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#CompositionalPrompting"/>
+        <skos:example>"bird's eye view", "worm's eye perspective", "isometric", "first-person POV"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#FramingDirectives">
+        <skos:prefLabel xml:lang="en">Framing Directives</skos:prefLabel>
+        <skos:definition>Specifying shot types, cropping, and subject framing.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#CompositionalPrompting"/>
+        <skos:example>"extreme close-up", "wide establishing shot", "medium shot", "full body portrait"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#SpatialArrangement">
+        <skos:prefLabel xml:lang="en">Spatial Arrangement</skos:prefLabel>
+        <skos:definition>Directing the placement and relationship of elements within the composition.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#CompositionalPrompting"/>
+        <skos:example>"rule of thirds", "centered composition", "symmetrical layout", "diagonal composition"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#FocalPointDirection">
+        <skos:prefLabel xml:lang="en">Focal Point Direction</skos:prefLabel>
+        <skos:definition>Guiding visual hierarchy and points of emphasis.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#CompositionalPrompting"/>
+        <skos:example>"focus on the eyes", "shallow depth of field", "background blur"</skos:example>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- ATMOSPHERIC PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#AtmosphericPrompting">
+        <skos:prefLabel xml:lang="en">Atmospheric Prompting</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Mood Prompting</skos:altLabel>
+        <skos:definition>Strategies that establish emotional tone, ambiance, and environmental qualities.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#LightingSpecification"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#ColorPaletteDirection"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#MoodDescriptors"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#EnvironmentalAtmosphere"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#LightingSpecification">
+        <skos:prefLabel xml:lang="en">Lighting Specification</skos:prefLabel>
+        <skos:definition>Defining light sources, quality, direction, and effects.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#AtmosphericPrompting"/>
+        <skos:example>"golden hour lighting", "dramatic chiaroscuro", "soft diffused light", "neon-lit", "volumetric lighting"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ColorPaletteDirection">
+        <skos:prefLabel xml:lang="en">Color Palette Direction</skos:prefLabel>
+        <skos:definition>Specifying color schemes, harmonies, and chromatic qualities.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#AtmosphericPrompting"/>
+        <skos:example>"muted earth tones", "vibrant complementary colors", "monochromatic blue", "warm palette"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#MoodDescriptors">
+        <skos:prefLabel xml:lang="en">Mood Descriptors</skos:prefLabel>
+        <skos:definition>Using emotional and psychological terms to influence atmosphere.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#AtmosphericPrompting"/>
+        <skos:example>"melancholic", "euphoric", "ominous", "serene", "mysterious"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#EnvironmentalAtmosphere">
+        <skos:prefLabel xml:lang="en">Environmental Atmosphere</skos:prefLabel>
+        <skos:definition>Describing weather, time of day, and environmental conditions.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#AtmosphericPrompting"/>
+        <skos:example>"foggy morning", "twilight", "stormy", "hazy summer afternoon"</skos:example>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- TECHNICAL PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#TechnicalPrompting">
+        <skos:prefLabel xml:lang="en">Technical Prompting</skos:prefLabel>
+        <skos:definition>Strategies specifying media, tools, rendering techniques, and production qualities.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#MediumSimulation"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#RenderingStyleSpecification"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#QualityModifiers"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#CameraEquipmentEmulation"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#MediumSimulation">
+        <skos:prefLabel xml:lang="en">Medium Simulation</skos:prefLabel>
+        <skos:definition>Invoking traditional or digital artistic media and their characteristics.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#TechnicalPrompting"/>
+        <skos:example>"oil painting", "watercolor", "charcoal sketch", "digital painting", "ink wash"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#RenderingStyleSpecification">
+        <skos:prefLabel xml:lang="en">Rendering Style Specification</skos:prefLabel>
+        <skos:definition>Defining digital rendering approaches and techniques.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#TechnicalPrompting"/>
+        <skos:example>"ray-traced", "cel-shaded", "photorealistic", "low-poly", "voxel art"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#QualityModifiers">
+        <skos:prefLabel xml:lang="en">Quality Modifiers</skos:prefLabel>
+        <skos:definition>Terms that influence output fidelity, detail level, and production value.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#TechnicalPrompting"/>
+        <skos:example>"highly detailed", "4K", "award-winning", "masterpiece", "professional quality"</skos:example>
+        <skos:scopeNote>Effectiveness of quality modifiers varies significantly across different AI systems.</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#CameraEquipmentEmulation">
+        <skos:prefLabel xml:lang="en">Camera Equipment Emulation</skos:prefLabel>
+        <skos:definition>Referencing specific cameras, lenses, or photographic equipment to influence output.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#TechnicalPrompting"/>
+        <skos:example>"shot on Hasselblad", "35mm film", "anamorphic lens", "macro photography", "tilt-shift"</skos:example>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- NARRATIVE PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#NarrativePrompting">
+        <skos:prefLabel xml:lang="en">Narrative Prompting</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Conceptual Prompting</skos:altLabel>
+        <skos:definition>Strategies that emphasize storytelling, symbolism, and conceptual content.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#SceneNarration"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#SymbolicDirection"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#CharacterDirection"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#WorldBuilding"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#SceneNarration">
+        <skos:prefLabel xml:lang="en">Scene Narration</skos:prefLabel>
+        <skos:definition>Describing scenes as unfolding events or moments in a story.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#NarrativePrompting"/>
+        <skos:example>"a lone traveler discovering ancient ruins at dawn"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#SymbolicDirection">
+        <skos:prefLabel xml:lang="en">Symbolic Direction</skos:prefLabel>
+        <skos:definition>Incorporating symbolic elements and metaphorical content.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#NarrativePrompting"/>
+        <skos:example>"representing the passage of time", "allegory of hope", "memento mori imagery"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#CharacterDirection">
+        <skos:prefLabel xml:lang="en">Character Direction</skos:prefLabel>
+        <skos:definition>Detailed specification of character attributes, expressions, poses, and actions.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#NarrativePrompting"/>
+        <skos:example>"weathered warrior with a contemplative expression", "elegant figure in dynamic pose"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#WorldBuilding">
+        <skos:prefLabel xml:lang="en">World Building</skos:prefLabel>
+        <skos:definition>Creating detailed environmental contexts with internal logic and history.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#NarrativePrompting"/>
+        <skos:example>"a steampunk city where Victorian architecture meets advanced technology"</skos:example>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- STRUCTURAL PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#StructuralPrompting">
+        <skos:prefLabel xml:lang="en">Structural Prompting</skos:prefLabel>
+        <skos:definition>Strategies that organize prompts using specific syntactic patterns and structures.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#TokenWeighting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#PromptOrdering"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#TemplateBasedPrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#ModularPrompting"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#TokenWeighting">
+        <skos:prefLabel xml:lang="en">Token Weighting</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Emphasis Notation</skos:altLabel>
+        <skos:definition>Using syntactic markers to increase or decrease the influence of specific terms.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StructuralPrompting"/>
+        <skos:example>"(detailed:1.4)", "((emphasized))", "[de-emphasized]"</skos:example>
+        <skos:scopeNote>Syntax varies between platforms (Stable Diffusion, Midjourney, etc.)</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#PromptOrdering">
+        <skos:prefLabel xml:lang="en">Prompt Ordering</skos:prefLabel>
+        <skos:definition>Strategic sequencing of prompt elements based on their importance.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StructuralPrompting"/>
+        <skos:scopeNote>Many models weight earlier tokens more heavily than later ones.</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#TemplateBasedPrompting">
+        <skos:prefLabel xml:lang="en">Template-Based Prompting</skos:prefLabel>
+        <skos:definition>Using standardized prompt structures with fillable parameters.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StructuralPrompting"/>
+        <skos:example>"[subject], [style], [lighting], [quality modifiers]"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ModularPrompting">
+        <skos:prefLabel xml:lang="en">Modular Prompting</skos:prefLabel>
+        <skos:definition>Building prompts from reusable component blocks that can be combined.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StructuralPrompting"/>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- REFINEMENT PROMPTING -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#RefinementPrompting">
+        <skos:prefLabel xml:lang="en">Refinement Prompting</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Iterative Prompting</skos:altLabel>
+        <skos:definition>Strategies for iteratively improving outputs through prompt modification.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#NegativePrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#VariationExploration"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#ProgressiveDetailAddition"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#ImageToImageRefinement"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#NegativePrompting">
+        <skos:prefLabel xml:lang="en">Negative Prompting</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Exclusion Prompting</skos:altLabel>
+        <skos:definition>Specifying elements, qualities, or artifacts to exclude from the output.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#RefinementPrompting"/>
+        <skos:example>"--no text", "negative prompt: blurry, distorted, low quality"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#VariationExploration">
+        <skos:prefLabel xml:lang="en">Variation Exploration</skos:prefLabel>
+        <skos:definition>Generating multiple variations to explore possibilities and select optimal results.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#RefinementPrompting"/>
+        <skos:example>Using seed variation, batch generation, or remix features</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ProgressiveDetailAddition">
+        <skos:prefLabel xml:lang="en">Progressive Detail Addition</skos:prefLabel>
+        <skos:definition>Incrementally adding specificity to prompts across iterations.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#RefinementPrompting"/>
+        <skos:scopeNote>Starting with broad concepts and progressively refining with specific details.</skos:scopeNote>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ImageToImageRefinement">
+        <skos:prefLabel xml:lang="en">Image-to-Image Refinement</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Img2Img</skos:altLabel>
+        <skos:definition>Using generated or reference images as input for further generation.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#RefinementPrompting"/>
+        <skos:related rdf:resource="http://example.org/ai-prompting-strategies#ControlNetGuidance"/>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- ADDITIONAL SPECIALIZED CONCEPTS -->
+    <!-- ============================================ -->
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ControlNetGuidance">
+        <skos:prefLabel xml:lang="en">ControlNet Guidance</skos:prefLabel>
+        <skos:definition>Using structural control mechanisms like edge detection, pose estimation, or depth maps.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#TechnicalPrompting"/>
+        <skos:example>Canny edge, OpenPose, depth maps, segmentation masks</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#PlatformSpecificSyntax">
+        <skos:prefLabel xml:lang="en">Platform-Specific Syntax</skos:prefLabel>
+        <skos:definition>Using command structures and parameters unique to specific AI platforms.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#StructuralPrompting"/>
+        <skos:example>"--ar 16:9" (Midjourney), "--style raw", "/imagine"</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#MultimodalPrompting">
+        <skos:prefLabel xml:lang="en">Multimodal Prompting</skos:prefLabel>
+        <skos:definition>Combining text with other input modalities such as images, audio, or sketches.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#PromptingStrategy"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#ImageReferencePrompting"/>
+        <skos:narrower rdf:resource="http://example.org/ai-prompting-strategies#SketchGuidedGeneration"/>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#ImageReferencePrompting">
+        <skos:prefLabel xml:lang="en">Image Reference Prompting</skos:prefLabel>
+        <skos:definition>Using reference images to guide style, composition, or content.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#MultimodalPrompting"/>
+        <skos:example>Style reference images, character reference sheets</skos:example>
+    </skos:Concept>
+
+    <skos:Concept rdf:about="http://example.org/ai-prompting-strategies#SketchGuidedGeneration">
+        <skos:prefLabel xml:lang="en">Sketch-Guided Generation</skos:prefLabel>
+        <skos:definition>Using rough sketches or drawings to guide compositional output.</skos:definition>
+        <skos:broader rdf:resource="http://example.org/ai-prompting-strategies#MultimodalPrompting"/>
+    </skos:Concept>
+
+    <!-- ============================================ -->
+    <!-- SEMANTIC RELATIONSHIPS -->
+    <!-- ============================================ -->
+
+    <!-- Related concept connections -->
+    <rdf:Description rdf:about="http://example.org/ai-prompting-strategies#LightingSpecification">
+        <skos:related rdf:resource="http://example.org/ai-prompting-strategies#MoodDescriptors"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ai-prompting-strategies#ColorPaletteDirection">
+        <skos:related rdf:resource="http://example.org/ai-prompting-strategies#MoodDescriptors"/>
+        <skos:related rdf:resource="http://example.org/ai-prompting-strategies#MovementReferencing"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ai-prompting-strategies#MediumSimulation">
+        <skos:related rdf:resource="http://example.org/ai-prompting-strategies#ArtistReferencing"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ai-prompting-strategies#TokenWeighting">
+        <skos:related rdf:resource="http://example.org/ai-prompting-strategies#PlatformSpecificSyntax"/>
+    </rdf:Description>
+
+</rdf:RDF>
