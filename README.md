@@ -3,7 +3,7 @@ Taxonomies, schemas and documentation for experimental generative AI prompting.
 
 KeeArt Taxonomies is a compact, open collection of RDF-encoded prompting taxonomies designed to map the practice of prompting for generative AI media. The project provides a foundational, interoperable vocabulary that both humans and machines can use to explore, reproduce, and extend creative workflows across visual, sonic, and multimodal domains.
 
-You can check our Whitepaper and the project website for more details on the project.
+You can check our [Whitepaper](https://github.com/edusedus/keeart/blob/main/Whitepaper.md) and the project website for more details on the project.
 
 At the moment we are starting with these RDF taxonomies:
 
