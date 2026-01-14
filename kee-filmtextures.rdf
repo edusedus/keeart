@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:filmtex="https://example.org/film-texture-taxonomy#">
+
+  <!-- Ontology header -->
+  <owl:Ontology rdf:about="https://example.org/film-texture-taxonomy">
+    <rdfs:label xml:lang="en">Photography Film Texture Taxonomy for Generative AI Prompting</rdfs:label>
+    <rdfs:comment xml:lang="en">A SKOS-based taxonomy of film texture concepts useful as prompt keywords (grain, halation, bloom, gate weave, dust, scratches, etc.).</rdfs:comment>
+  </owl:Ontology>
+
+  <!-- Concept Scheme -->
+  <skos:ConceptScheme rdf:about="https://example.org/film-texture-taxonomy#FilmTextureScheme">
+    <skos:prefLabel xml:lang="en">Film Texture Concepts (Prompt Taxonomy)</skos:prefLabel>
+    <skos:definition xml:lang="en">A controlled vocabulary of film texture-related concepts for generative AI prompting.</skos:definition>
+  </skos:ConceptScheme>
+
+  <!-- Top-level Concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#FilmTexture">
+    <skos:prefLabel xml:lang="en">film texture</skos:prefLabel>
+    <skos:definition xml:lang="en">Overall perceptual texture and artifacts associated with photographic motion/still film capture, processing, and scanning.</skos:definition>
+    <skos:topConceptOf rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#Grain">
+    <skos:prefLabel xml:lang="en">grain</skos:prefLabel>
+    <skos:altLabel xml:lang="en">film grain</skos:altLabel>
+    <skos:definition xml:lang="en">Random granular pattern from the film emulsion, typically visible in midtones and shadows.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#Halation">
+    <skos:prefLabel xml:lang="en">halation</skos:prefLabel>
+    <skos:altLabel xml:lang="en">halo glow</skos:altLabel>
+    <skos:definition xml:lang="en">Glow or halo around bright highlights caused by light scattering within the film base/emulsion.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#Bloom">
+    <skos:prefLabel xml:lang="en">bloom</skos:prefLabel>
+    <skos:altLabel xml:lang="en">highlight bloom</skos:altLabel>
+    <skos:definition xml:lang="en">Soft spreading of highlight intensity, often perceived as a gentle glow (distinct from lens flare).</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#GateWeave">
+    <skos:prefLabel xml:lang="en">gate weave</skos:prefLabel>
+    <skos:altLabel xml:lang="en">frame weave</skos:altLabel>
+    <skos:definition xml:lang="en">Subtle frame-to-frame positional jitter from film transport and projection/scanning.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#DustAndDebris">
+    <skos:prefLabel xml:lang="en">dust and debris</skos:prefLabel>
+    <skos:altLabel xml:lang="en">specks</skos:altLabel>
+    <skos:definition xml:lang="en">Random dust specks or particulate contamination visible in the image.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#Scratches">
+    <skos:prefLabel xml:lang="en">scratches</skos:prefLabel>
+    <skos:altLabel xml:lang="en">film scratches</skos:altLabel>
+    <skos:definition xml:lang="en">Linear damage marks on film from handling, processing, or projection.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#Flicker">
+    <skos:prefLabel xml:lang="en">flicker</skos:prefLabel>
+    <skos:altLabel xml:lang="en">exposure flicker</skos:altLabel>
+    <skos:definition xml:lang="en">Frame-to-frame brightness variation from exposure inconsistencies, processing, or scanning/projection.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ColorDyeArtifacts">
+    <skos:prefLabel xml:lang="en">color dye artifacts</skos:prefLabel>
+    <skos:altLabel xml:lang="en">dye clouds</skos:altLabel>
+    <skos:definition xml:lang="en">Texture or irregularities from color dye layers (e.g., clumping, mottling, dye cloud patterns).</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ScanningArtifacts">
+    <skos:prefLabel xml:lang="en">scanning artifacts</skos:prefLabel>
+    <skos:altLabel xml:lang="en">film scan artifacts</skos:altLabel>
+    <skos:definition xml:lang="en">Artifacts introduced by film scanning or digitization (e.g., sharpening halos, banding, Newton rings).</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ProcessingArtifacts">
+    <skos:prefLabel xml:lang="en">processing artifacts</skos:prefLabel>
+    <skos:altLabel xml:lang="en">development artifacts</skos:altLabel>
+    <skos:definition xml:lang="en">Artifacts from chemical development and handling (e.g., bromide drag, streaking, uneven development).</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#AgingAndDegradation">
+    <skos:prefLabel xml:lang="en">aging and degradation</skos:prefLabel>
+    <skos:altLabel xml:lang="en">film aging</skos:altLabel>
+    <skos:definition xml:lang="en">Changes from time, storage, and environmental exposure (e.g., fading, vinegar syndrome effects, base fog).</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#FilmTexture"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Grain narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#FineGrain">
+    <skos:prefLabel xml:lang="en">fine grain</skos:prefLabel>
+    <skos:definition xml:lang="en">Small, subtle grain structure; relatively smooth texture.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Grain"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#MediumGrain">
+    <skos:prefLabel xml:lang="en">medium grain</skos:prefLabel>
+    <skos:definition xml:lang="en">Moderate grain visibility; classic consumer film texture.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Grain"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#CoarseGrain">
+    <skos:prefLabel xml:lang="en">coarse grain</skos:prefLabel>
+    <skos:altLabel xml:lang="en">heavy grain</skos:altLabel>
+    <skos:definition xml:lang="en">Large, prominent grain with strong texture; often associated with high ISO film or push processing.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Grain"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#GrainClumping">
+    <skos:prefLabel xml:lang="en">grain clumping</skos:prefLabel>
+    <skos:altLabel xml:lang="en">clumpy grain</skos:altLabel>
+    <skos:definition xml:lang="en">Grain appears aggregated into clusters or blotches rather than evenly distributed.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Grain"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Halation narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#RedHalation">
+    <skos:prefLabel xml:lang="en">red halation</skos:prefLabel>
+    <skos:altLabel xml:lang="en">red highlight halos</skos:altLabel>
+    <skos:definition xml:lang="en">Reddish halo around bright highlights, commonly associated with certain color negative stocks.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Halation"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#SoftHalation">
+    <skos:prefLabel xml:lang="en">soft halation</skos:prefLabel>
+    <skos:definition xml:lang="en">Subtle, gentle haloing that slightly lifts highlight edges without overpowering the image.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Halation"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#StrongHalation">
+    <skos:prefLabel xml:lang="en">strong halation</skos:prefLabel>
+    <skos:definition xml:lang="en">Pronounced haloing around bright areas with clearly visible glow and edge spreading.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Halation"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Bloom narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#HighlightBloom">
+    <skos:prefLabel xml:lang="en">highlight bloom</skos:prefLabel>
+    <skos:definition xml:lang="en">Highlights spread softly into adjacent tones, creating a creamy glow.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Bloom"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#LowContrastGlow">
+    <skos:prefLabel xml:lang="en">low-contrast glow</skos:prefLabel>
+    <skos:altLabel xml:lang="en">lifted blacks glow</skos:altLabel>
+    <skos:definition xml:lang="en">Overall soft glow impression associated with lowered microcontrast and gently lifted shadows.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Bloom"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Gate weave narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#SubtleGateWeave">
+    <skos:prefLabel xml:lang="en">subtle gate weave</skos:prefLabel>
+    <skos:definition xml:lang="en">Barely perceptible micro-jitter; stable overall but not perfectly locked.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#GateWeave"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#PronouncedGateWeave">
+    <skos:prefLabel xml:lang="en">pronounced gate weave</skos:prefLabel>
+    <skos:altLabel xml:lang="en">wobbly frame</skos:altLabel>
+    <skos:definition xml:lang="en">Noticeable frame movement across time, typical of worn projectors or poor scanning stabilization.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#GateWeave"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Dust and debris narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#DustSpecks">
+    <skos:prefLabel xml:lang="en">dust specks</skos:prefLabel>
+    <skos:definition xml:lang="en">Small isolated specks, often bright or dark depending on negative/positive and scan inversion.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#DustAndDebris"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#HairInGate">
+    <skos:prefLabel xml:lang="en">hair in gate</skos:prefLabel>
+    <skos:altLabel xml:lang="en">lint strand</skos:altLabel>
+    <skos:definition xml:lang="en">Thin hair/lint strand appearing as a curved or straight dark line across frames.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#DustAndDebris"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Scratches narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#FineScratches">
+    <skos:prefLabel xml:lang="en">fine scratches</skos:prefLabel>
+    <skos:definition xml:lang="en">Thin, subtle linear marks; may be intermittent.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Scratches"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#DeepScratches">
+    <skos:prefLabel xml:lang="en">deep scratches</skos:prefLabel>
+    <skos:altLabel xml:lang="en">severe scratches</skos:altLabel>
+    <skos:definition xml:lang="en">Prominent scratches, often bright/white on scans, with strong distraction.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Scratches"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Flicker narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#SubtleFlicker">
+    <skos:prefLabel xml:lang="en">subtle flicker</skos:prefLabel>
+    <skos:definition xml:lang="en">Small exposure variation across frames; barely noticeable but adds analog feel.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Flicker"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#StrongFlicker">
+    <skos:prefLabel xml:lang="en">strong flicker</skos:prefLabel>
+    <skos:altLabel xml:lang="en">pulsing exposure</skos:altLabel>
+    <skos:definition xml:lang="en">Clearly visible brightness pumping from frame to frame.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#Flicker"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Color dye artifacts narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#DyeClouds">
+    <skos:prefLabel xml:lang="en">dye clouds</skos:prefLabel>
+    <skos:definition xml:lang="en">Cloud-like, blotchy chroma texture, especially visible in smooth color fields.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ColorDyeArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ColorMottle">
+    <skos:prefLabel xml:lang="en">color mottle</skos:prefLabel>
+    <skos:altLabel xml:lang="en">chroma mottling</skos:altLabel>
+    <skos:definition xml:lang="en">Uneven chroma density producing a mottled color texture.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ColorDyeArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Scanning artifacts narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#SharpeningHalos">
+    <skos:prefLabel xml:lang="en">sharpening halos</skos:prefLabel>
+    <skos:altLabel xml:lang="en">scan sharpening artifacts</skos:altLabel>
+    <skos:definition xml:lang="en">Edge halos introduced by aggressive scan sharpening.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ScanningArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#NewtonRings">
+    <skos:prefLabel xml:lang="en">Newton rings</skos:prefLabel>
+    <skos:definition xml:lang="en">Interference patterns (concentric/rainbow rings) from film contacting glass during scanning.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ScanningArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ScanBanding">
+    <skos:prefLabel xml:lang="en">scan banding</skos:prefLabel>
+    <skos:altLabel xml:lang="en">horizontal banding</skos:altLabel>
+    <skos:definition xml:lang="en">Banding or striping introduced during digitization.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ScanningArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Processing artifacts narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#BromideDrag">
+    <skos:prefLabel xml:lang="en">bromide drag</skos:prefLabel>
+    <skos:altLabel xml:lang="en">development drag</skos:altLabel>
+    <skos:definition xml:lang="en">Streaks caused by uneven developer flow, often trailing from high-density areas in B&amp;W.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ProcessingArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#UnevenDevelopment">
+    <skos:prefLabel xml:lang="en">uneven development</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blotchy development</skos:altLabel>
+    <skos:definition xml:lang="en">Irregular density from inconsistent agitation, temperature, or chemistry.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ProcessingArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ChemicalStaining">
+    <skos:prefLabel xml:lang="en">chemical staining</skos:prefLabel>
+    <skos:definition xml:lang="en">Stains or discoloration from fixer issues, contamination, or aging chemistry.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#ProcessingArtifacts"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Aging and degradation narrower concepts -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#BaseFog">
+    <skos:prefLabel xml:lang="en">base fog</skos:prefLabel>
+    <skos:altLabel xml:lang="en">fogging</skos:altLabel>
+    <skos:definition xml:lang="en">Overall veiling density reducing contrast, often from age, heat, or radiation exposure.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#AgingAndDegradation"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#ColorFading">
+    <skos:prefLabel xml:lang="en">color fading</skos:prefLabel>
+    <skos:altLabel xml:lang="en">dye fading</skos:altLabel>
+    <skos:definition xml:lang="en">Loss of dye density over time, often shifting color balance and reducing saturation.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#AgingAndDegradation"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#FilmWarping">
+    <skos:prefLabel xml:lang="en">film warping</skos:prefLabel>
+    <skos:altLabel xml:lang="en">film curl</skos:altLabel>
+    <skos:definition xml:lang="en">Physical deformation that can affect focus/scan flatness and introduce uneven sharpness.</skos:definition>
+    <skos:broader rdf:resource="https://example.org/film-texture-taxonomy#AgingAndDegradation"/>
+    <skos:inScheme rdf:resource="https://example.org/film-texture-taxonomy#FilmTextureScheme"/>
+  </skos:Concept>
+
+  <!-- Helpful relations between concepts (associative) -->
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#RedHalation">
+    <skos:related rdf:resource="https://example.org/film-texture-taxonomy#HighlightBloom"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#DustAndDebris">
+    <skos:related rdf:resource="https://example.org/film-texture-taxonomy#ScanningArtifacts"/>
+  </skos:Concept>
+
+  <skos:Concept rdf:about="https://example.org/film-texture-taxonomy#Scratches">
+    <skos:related rdf:resource="https://example.org/film-texture-taxonomy#AgingAndDegradation"/>
+  </skos:Concept>
+
+</rdf:RDF>
