@@ -10,3 +10,4 @@ At the moment we are starting with these RDF taxonomies:
 - [Kee-Gps](https://github.com/edusedus/keeart/blob/main/kee-gps.rdf): A taxonomy of general prompting strategies in generative AI media.  
 - [Kee-Camerangles](https://github.com/edusedus/keeart/blob/main/kee-camerangles.rdf): A taxonomy of camera angles for generative AI media, drawing on photography and cinematography concepts.  
 - [Kee-lighting](https://github.com/edusedus/keeart/blob/main/kee-lighting.rdf): A taxonomy of lighting concepts for generative AI media, drawing on photography and cinematography concepts.
+- [Kee-filmtextures](https://github.com/edusedus/keeart/blob/main/kee-filmtextures.rdf): A taxonomy of film textures from photography. Initial work, testing.
